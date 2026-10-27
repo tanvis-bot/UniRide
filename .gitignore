@@ -11,3 +11,5 @@ build/
 
 uploads/*
 !uploads/.gitkeep
+
+uniride_cloud_backup.sql
