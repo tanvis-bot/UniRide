@@ -280,7 +280,7 @@ export async function getChatThreads(req, res) {
       const aTime = a.last_message?.created_at || "";
       const bTime = b.last_message?.created_at || "";
 
-      return bTime.localeCompare(aTime);
+      return String(bTime).localeCompare(String(aTime));
     });
 
     return res.status(200).json(threads);
