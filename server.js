@@ -187,10 +187,8 @@ async function startServer() {
   try {
     await testDatabaseConnection();
 
-    httpServer.listen(PORT, () => {
-      console.log(
-        `UniRide backend running on http://localhost:${PORT}`
-      );
+    httpServer.listen(PORT, "0.0.0.0", () => {
+      console.log(`UniRide backend running on port ${PORT}`);
     });
   } catch (error) {
     console.error(
